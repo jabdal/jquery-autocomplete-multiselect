@@ -42,7 +42,7 @@
             function extractLast(term) {
                 return split(term).pop();
             }
-            $("#tags").data("ui-autocomplete")._renderItem = function (ul, item) {
+            $("#tags").autocomplete().data("ui-autocomplete")._renderItem = function (ul, item) {
                     return $("<li>")
                         .append("<input onclick='cc(this)' type='checkbox'/>" + item.label)
                         .appendTo(ul);
